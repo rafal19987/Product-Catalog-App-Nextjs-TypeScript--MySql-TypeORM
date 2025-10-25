@@ -1,0 +1,37 @@
+{
+  "name": "product-catalog",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "typeorm": "ts-node --project tsconfig.typeorm.json ./node_modules/typeorm/cli",
+    "migration:generate": "npm run typeorm -- migration:generate ./database/migrations -d ./database/data-source.ts",
+    "migration:create": "npm run typeorm -- migration:create ./database/migrations/Migration",
+    "migration:run": "npm run typeorm -- migration:run -d ./database/data-source.ts",
+    "migration:revert": "npm run typeorm -- migration:revert -d ./database/data-source.ts",
+    "migration:show": "npm run typeorm -- migration:show -d ./database/data-source.ts"
+  },
+  "dependencies": {
+    "mysql2": "^3.15.3",
+    "next": "16.0.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.27"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.0.0",
+    "tailwindcss": "^4",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5"
+  }
+}
