@@ -7,22 +7,19 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "typeorm": "ts-node --project tsconfig.typeorm.json ./node_modules/typeorm/cli",
-    "migration:generate": "npm run typeorm -- migration:generate ./database/migrations -d ./database/data-source.ts",
-    "migration:create": "npm run typeorm -- migration:create ./database/migrations/Migration",
-    "migration:run": "npm run typeorm -- migration:run -d ./database/data-source.ts",
-    "migration:revert": "npm run typeorm -- migration:revert -d ./database/data-source.ts",
-    "migration:show": "npm run typeorm -- migration:show -d ./database/data-source.ts"
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:deploy": "prisma migrate deploy",
+    "prisma:studio": "prisma studio"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
+    "@prisma/client": "^6.18.0",
     "mysql2": "^3.15.3",
     "next": "16.0.0",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-hook-form": "^7.65.0",
-    "reflect-metadata": "^0.2.2",
-    "typeorm": "^0.3.27",
     "zod": "^4.1.12"
   },
   "devDependencies": {
@@ -32,9 +29,8 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.0.0",
+    "prisma": "^6.18.0",
     "tailwindcss": "^4",
-    "ts-node": "^10.9.2",
-    "tsconfig-paths": "^4.2.0",
     "typescript": "^5"
   }
 }

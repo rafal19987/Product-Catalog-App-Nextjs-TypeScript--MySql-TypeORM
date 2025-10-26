@@ -1,6 +1,6 @@
 # Product-catalog
 
-Stack: React, Next, TypeScript, TypeORM, MySQL, Docker
+Stack: React, Next, TypeScript, PrismaORM, MySQL, Docker
 
 ## Installation
 
@@ -18,10 +18,11 @@ Run Docker Desktop for Windows
 docker-compose up -d
 ```
 
-Run migrations
+Prisma setup
 
 ```bash
-npm run migration:run
+npx prisma generate
+npx prisma db push
 ```
 
 Start Application
