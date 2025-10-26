@@ -15,12 +15,15 @@
     "migration:show": "npm run typeorm -- migration:show -d ./database/data-source.ts"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
     "mysql2": "^3.15.3",
     "next": "16.0.0",
     "react": "19.2.0",
     "react-dom": "19.2.0",
+    "react-hook-form": "^7.65.0",
     "reflect-metadata": "^0.2.2",
-    "typeorm": "^0.3.27"
+    "typeorm": "^0.3.27",
+    "zod": "^4.1.12"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
