@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import CreateCategoryForm from './components/forms/CreateCategoryForm';
 
 export default function Home() {
   return (
@@ -25,7 +26,9 @@ export default function Home() {
           </nav>
         </div>
         <main className='flex grow w-full h-full py-32 px-16 bg-white dark:bg-black sm:items-start'>
-          <div></div>
+          <div>
+            <CreateCategoryForm />
+          </div>
         </main>
       </div>
     </div>
